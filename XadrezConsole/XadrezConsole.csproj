@@ -48,6 +48,7 @@
     <Compile Include="TabuleiroXadrez\Peca.cs" />
     <Compile Include="TabuleiroXadrez\Posicao.cs" />
     <Compile Include="TabuleiroXadrez\Tabuleiro.cs" />
+    <Compile Include="Tela.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
