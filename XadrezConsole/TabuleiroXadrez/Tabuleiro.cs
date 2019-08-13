@@ -17,11 +17,34 @@
         {
             return _pecas[linha, coluna];
         }
-
+        public Peca Peca(Posicao posicao)
+        {
+            return _pecas[posicao.Linha, posicao.Coluna];
+        }
         public void InserirPeca(Peca p, Posicao posicao)
         {
+            if (ExistePeca(posicao))
+                throw new TabuleiroException("Já existe uma peça nessa posição");
+
             _pecas[posicao.Linha, posicao.Coluna] = p;
             p.Posicao = posicao;
+        }
+        public bool PosicaoValida(Posicao posicao)
+        {
+            if (posicao.Linha < 0 || posicao.Linha >= Linhas || posicao.Coluna < 0 || posicao.Coluna >= Colunas)
+                return false;
+
+            return true;
+        }
+        public void ValidarPosicao(Posicao posicao)
+        {
+            if (!PosicaoValida(posicao))
+                throw new TabuleiroException("Posição inválida!");
+        }
+        public bool ExistePeca(Posicao posicao)
+        {
+            ValidarPosicao(posicao);
+            return Peca(posicao) != null;
         }
 
     }
