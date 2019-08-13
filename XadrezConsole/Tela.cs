@@ -23,6 +23,7 @@ namespace XadrezConsole
                     {
                     Console.Write(tab.Peca(i,j) + " ");
                     }
+
                 }
                 Console.WriteLine();
             }

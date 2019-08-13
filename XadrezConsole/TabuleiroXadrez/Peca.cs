@@ -7,9 +7,9 @@
         public int QuantidadeMovimentos { get; protected set; }
         public Tabuleiro Tabuleiro { get; protected set; }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiro tabuleiro)
+        public Peca(Cor cor, Tabuleiro tabuleiro)
         {
-            this.Posicao = posicao;
+            this.Posicao = null;
             this.Cor = Cor;
             this.Tabuleiro = tabuleiro;
             this.QuantidadeMovimentos = 0;
