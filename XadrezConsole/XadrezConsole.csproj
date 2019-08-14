@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="JogoXadrez\Bispo.cs" />
+    <Compile Include="JogoXadrez\PosicaoXadrez.cs" />
     <Compile Include="JogoXadrez\Rainha.cs" />
     <Compile Include="JogoXadrez\Peao.cs" />
     <Compile Include="JogoXadrez\Cavalo.cs" />
