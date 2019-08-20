@@ -49,6 +49,7 @@
     <Compile Include="JogoXadrez\Cavalo.cs" />
     <Compile Include="JogoXadrez\Torre.cs" />
     <Compile Include="JogoXadrez\Rei.cs" />
+    <Compile Include="PartidaXadrez\PartidaDeXadrez.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TabuleiroXadrez\Cor.cs" />

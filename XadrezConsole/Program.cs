@@ -1,5 +1,6 @@
 using System;
 using XadrezConsole.JogoXadrez;
+using XadrezConsole.PartidaXadrez;
 using XadrezConsole.TabuleiroXadrez;
 
 namespace XadrezConsole
@@ -8,15 +9,22 @@ namespace XadrezConsole
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            PartidaDeXadrez partida = new PartidaDeXadrez();
 
-            tab.InserirPeca(new Torre(tab, Cor.Azul), new Posicao(0, 0));
-            tab.InserirPeca(new Torre(tab, Cor.Azul), new Posicao(1, 3));
-            tab.InserirPeca(new Rei(tab, Cor.Azul), new Posicao(2, 4));
+            while (!partida.Terminada)
+            {
+                Console.Clear();
+                Tela.ImprimirTabuleiro(partida.Tab);
 
-            tab.InserirPeca(new Torre(tab, Cor.Vermelha), new Posicao(3, 5));
+                Console.Write("Origem: ");
+                Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
 
-            Tela.ImprimirTabuleiro(tab);
+                Console.Write("Destino: ");
+                Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
+
+                partida.ExecutarMovimento(origem, destino);
+            }
+
             Console.ReadLine();
         }
     }
