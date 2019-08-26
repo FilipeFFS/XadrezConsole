@@ -2,9 +2,9 @@
 
 namespace XadrezConsole.JogoXadrez
 {
-    class Bispo : Peca
+    class Bispo// : Peca
     {
-        public Bispo(Tabuleiro tab, Cor cor):base(cor, tab)
+        public Bispo(Tabuleiro tab, Cor cor)// : base(cor, tab)
         {
         }
 

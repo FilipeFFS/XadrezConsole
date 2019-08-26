@@ -2,9 +2,9 @@
 
 namespace XadrezConsole.JogoXadrez
 {
-    class Peao : Peca
+    class Peao// : Peca
     {
-        public Peao(Tabuleiro tab, Cor cor):base(cor, tab)
+        public Peao(Tabuleiro tab, Cor cor)// : base(cor, tab)
         {
         }
 

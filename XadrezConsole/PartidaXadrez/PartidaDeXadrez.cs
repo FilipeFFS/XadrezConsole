@@ -35,42 +35,22 @@ namespace XadrezConsole.PartidaXadrez
 
         private void ColocarPecas()
         {
-            Tab.InserirPeca(new Torre(Tab, Cor.Azul), new PosicaoXadrez('a',1).ToPosicao());
-            Tab.InserirPeca(new Cavalo(Tab, Cor.Azul), new PosicaoXadrez('b',1).ToPosicao());
-            Tab.InserirPeca(new Bispo(Tab, Cor.Azul), new PosicaoXadrez('c',1).ToPosicao());
+            Tab.InserirPeca(new Torre(Tab, Cor.Azul), new PosicaoXadrez('c',1).ToPosicao());
             Tab.InserirPeca(new Rei(Tab, Cor.Azul), new PosicaoXadrez('d',1).ToPosicao());
-            Tab.InserirPeca(new Rainha(Tab, Cor.Azul), new PosicaoXadrez('e',1).ToPosicao());
-            Tab.InserirPeca(new Bispo(Tab, Cor.Azul), new PosicaoXadrez('f',1).ToPosicao());
-            Tab.InserirPeca(new Cavalo(Tab, Cor.Azul), new PosicaoXadrez('g',1).ToPosicao());
-            Tab.InserirPeca(new Torre(Tab, Cor.Azul), new PosicaoXadrez('h',1).ToPosicao());
+            Tab.InserirPeca(new Torre(Tab, Cor.Azul), new PosicaoXadrez('e',1).ToPosicao());
+            
+            Tab.InserirPeca(new Torre(Tab, Cor.Azul), new PosicaoXadrez('c', 2).ToPosicao());
+            Tab.InserirPeca(new Torre(Tab, Cor.Azul), new PosicaoXadrez('d', 2).ToPosicao());
+            Tab.InserirPeca(new Torre(Tab, Cor.Azul), new PosicaoXadrez('e', 2).ToPosicao());
 
-            Tab.InserirPeca(new Peao(Tab, Cor.Azul), new PosicaoXadrez('a', 2).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Azul), new PosicaoXadrez('b', 2).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Azul), new PosicaoXadrez('c', 2).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Azul), new PosicaoXadrez('d', 2).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Azul), new PosicaoXadrez('e', 2).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Azul), new PosicaoXadrez('f', 2).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Azul), new PosicaoXadrez('g', 2).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Azul), new PosicaoXadrez('h', 2).ToPosicao());
-
-
-            Tab.InserirPeca(new Torre(Tab, Cor.Vermelha), new PosicaoXadrez('a', 8).ToPosicao());
-            Tab.InserirPeca(new Cavalo(Tab, Cor.Vermelha), new PosicaoXadrez('b', 8).ToPosicao());
-            Tab.InserirPeca(new Bispo(Tab, Cor.Vermelha), new PosicaoXadrez('c', 8).ToPosicao());
+            
+            Tab.InserirPeca(new Torre(Tab, Cor.Vermelha), new PosicaoXadrez('c', 8).ToPosicao());
             Tab.InserirPeca(new Rei(Tab, Cor.Vermelha), new PosicaoXadrez('d', 8).ToPosicao());
-            Tab.InserirPeca(new Rainha(Tab, Cor.Vermelha), new PosicaoXadrez('e', 8).ToPosicao());
-            Tab.InserirPeca(new Bispo(Tab, Cor.Vermelha), new PosicaoXadrez('f', 8).ToPosicao());
-            Tab.InserirPeca(new Cavalo(Tab, Cor.Vermelha), new PosicaoXadrez('g', 8).ToPosicao());
-            Tab.InserirPeca(new Torre(Tab, Cor.Vermelha), new PosicaoXadrez('h', 8).ToPosicao());
-
-            Tab.InserirPeca(new Peao(Tab, Cor.Vermelha), new PosicaoXadrez('a', 7).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Vermelha), new PosicaoXadrez('b', 7).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Vermelha), new PosicaoXadrez('c', 7).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Vermelha), new PosicaoXadrez('d', 7).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Vermelha), new PosicaoXadrez('e', 7).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Vermelha), new PosicaoXadrez('f', 7).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Vermelha), new PosicaoXadrez('g', 7).ToPosicao());
-            Tab.InserirPeca(new Peao(Tab, Cor.Vermelha), new PosicaoXadrez('h', 7).ToPosicao());
+            Tab.InserirPeca(new Torre(Tab, Cor.Vermelha), new PosicaoXadrez('e', 8).ToPosicao());
+            
+            Tab.InserirPeca(new Torre(Tab, Cor.Vermelha), new PosicaoXadrez('c', 7).ToPosicao());
+            Tab.InserirPeca(new Torre(Tab, Cor.Vermelha), new PosicaoXadrez('d', 7).ToPosicao());
+            Tab.InserirPeca(new Torre(Tab, Cor.Vermelha), new PosicaoXadrez('e', 7).ToPosicao());
 
         }
     }
