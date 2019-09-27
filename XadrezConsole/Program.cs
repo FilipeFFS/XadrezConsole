@@ -9,29 +9,49 @@ namespace XadrezConsole
     {
         static void Main(string[] args)
         {
-            PartidaDeXadrez partida = new PartidaDeXadrez();
-
-            while (!partida.Terminada)
+            try
             {
-                Console.Clear();
-                Tela.ImprimirTabuleiro(partida.Tab);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                Console.WriteLine();
-                Console.Write("Origem: ");
-                Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+                while (!partida.Terminada)
+                {
+                    try
+                    {
+                        Console.Clear();
+                        Tela.ImprimirTabuleiro(partida.Tab);
 
-                bool[,] posicoesPossiveis = partida.Tab.Peca(origem).MovimentosPossiveis();
+                        Console.WriteLine();
+                        Console.WriteLine("Turno: " + partida.Turno);
+                        Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
 
-                Console.Clear();
-                Tela.ImprimirTabuleiro(partida.Tab, posicoesPossiveis);
+                        Console.WriteLine();
+                        Console.Write("Origem: ");
+                        Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+                        partida.ValidarPosicaoOrigem(origem);
 
-                Console.WriteLine();
-                Console.Write("Destino: ");
-                Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
+                        bool[,] posicoesPossiveis = partida.Tab.Peca(origem).MovimentosPossiveis();
 
-                partida.ExecutarMovimento(origem, destino);
+                        Console.Clear();
+                        Tela.ImprimirTabuleiro(partida.Tab, posicoesPossiveis);
+
+                        Console.WriteLine();
+                        Console.Write("Destino: ");
+                        Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
+                        partida.ValidarPosicaoDestino(origem, destino);
+
+                        partida.RealizaJogada(origem, destino);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.Message);
+                        Console.ReadLine();
+                    }
+                }
             }
-
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadLine();
         }
     }
